@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise and Diet Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto py-12">
+        <h1 class="text-4xl font-bold text-center mb-8">Exercise and Diet Chat</h1>
+        <div class="bg-white shadow-md rounded p-6">
+            <div id="chat" class="overflow-y-auto h-96">
+                <!-- Chat messages will be added here -->
+            </div>
+            <div class="mt-4">
+                <input type="text" id="messageInput" class="w-full rounded border border-gray-300 p-2" placeholder="Type your message...">
+                <button onclick="sendPostRequest()" class="bg-blue-500 text-white py-2 px-4 rounded mt-2">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let assistantMessages = [];
+        let userMessages = [];
+
+        async function sendPostRequest() {
+            const url = 'http://localhost:3000/api';
+            const messageInput = document.getElementById('messageInput');
+            const data = { message: messageInput.value };
+
+            displayUserMessage(messageInput.value);
+
+            //User message is added to the array
+            
+            messageInput.value = '';
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userMessages: userMessages,
+                    assistantMessages: assistantMessages,
+                })
+            });
+
+            const responseData = await response.json();
+            console.log(responseData);
+            displayServerMessage(responseData.assistant);
+            
+
+
+            
+        }
+
+        function displayUserMessage(message) {
+            const chat = document.getElementById('chat');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('bg-green-200', 'rounded', 'p-2', 'my-2', 'text-black', 'text-right');
+            messageElement.innerText = message;
+            chat.appendChild(messageElement);
+            userMessages.push(message);
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        function displayServerMessage(message) {
+            const chat = document.getElementById('chat');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('bg-blue-200', 'rounded', 'p-2', 'my-2', 'text-black');
+            messageElement.innerText = message;
+            chat.appendChild(messageElement);
+            assistantMessages.push(message);
+            chat.scrollTop = chat.scrollHeight;
+        }
+    </script>
+</body>
+</html>
