@@ -6,10 +6,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise and Diet Chat</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
 <body class="bg-gray-100 min-h-screen">
     <div class="container mx-auto py-12">
-        <h1 class="text-4xl font-bold text-center mb-8">Exercise and Diet Chat</h1>
+        <img src="image.png" alt="" class="mx-auto mb-4 w-45 h-40 object-cover rounded border-5 ">
+        <h1 class="text-4xl font-bold text-center mb-8">헬린이의 매크로</h1>
+
+        <div class="max-w-2xl mx-auto bg-white p-16">
+
+            <form>
+            <div class="grid gap-6 mb-6 lg:grid-cols-1">
+                <div>
+                <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">성별</label>
+                    <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                            <div class="flex items-center pl-3">
+                                <input id="horizontal-list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">남자 </label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                            <div class="flex items-center pl-3">
+                                <input id="horizontal-list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">여자</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">나이</label>
+                    <input type="number" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="21">
+                </div>  
+                <div>
+                    <label for="height" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">키</label>
+                    <input type="number" id="height" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="175cm">
+                </div>
+                <div>
+                    <label for="website" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">몸무게</label>
+                    <input type="number" id="website" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="70kg">
+                </div>
+            </div>
+
+            <div class="relative flex py-5 items-center">
+                <div class="flex-grow border-t border-gray-400"></div>
+                <span class="flex-shrink mx-4 text-gray-400">▼ 아래항목 필수는 아님 ▼</span>
+                <div class="flex-grow border-t border-gray-400"></div>
+            </div>
+
+
+
+            <div class="mb-6">
+                <label for="motivate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">운동 목적</label>
+                <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5">
+                            <input id="list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">다이어트</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">근육량 약간 감소, 체지방 감소</p>
+                        </div>
+                    </li>
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5 ">
+                            <input id="list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">유지어터</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">근육량, 체지방 유지</p>
+                        </div>
+                    </li>
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5">
+                            <input id="list-radio-millitary" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">린매스업</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">근육량 약간 증가, 체지방 약간 감소</p>
+                        </div>
+                    </li>
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5">
+                            <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">벌크업</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">근육량 증가, 체지방 증가</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <label for="motivate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">활동량</label>
+                <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5">
+                            <input id="list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">매우 활동적이지 않음</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">운동 거의 하지 않음</p>
+                        </div>
+                    </li>
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5 ">
+                            <input id="list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">가벼운 활동</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">일주일에 1~3일 운동</p>
+                        </div>
+                    </li>
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5">
+                            <input id="list-radio-millitary" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">중간 활동</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">일주일에 3~5일 운동</p>
+                        </div>
+                    </li>
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5">
+                            <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">심한 활동</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">일주일에 6~7일 운동</p>
+                        </div>
+                    </li>
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                        <div class="flex items-center pl-5">
+                            <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">매우 심한 활동</label>
+                            <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">일주일에 7일 운동 + α</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <label for="bodyfat" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">체지방량</label>
+                <input type="number" id="bodyfat" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="">
+            </div>
+            <div class="mb-6">
+                <label for="bodymuscle " class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">근육량</label>
+                <input type="number" id="bodymuscle " class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="">
+            </div>
+            
+            <div class="flex items-start mb-6">
+                <div class="flex items-center h-5">
+                <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800">
+                </div>
+                <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-400">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+            </div>
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+        </form>
+        
+            <p class="mt-5">These input field components is part of a larger, open-source library of Tailwind CSS components. Learn
+                more by going to the official <a class="text-blue-600 hover:underline"
+                    href="https://flowbite.com/docs/getting-started/introduction/" target="_blank">Flowbite
+                    Documentation</a>.
+            </p>
+        </div>
+
         <div class="bg-white shadow-md rounded p-6">
             <div id="chat" class="overflow-y-auto h-96">
                 <!-- Chat messages will be added here -->
@@ -22,6 +170,7 @@
     </div>
     
     <script>
+
         let assistantMessages = [];
         let userMessages = [];
 
