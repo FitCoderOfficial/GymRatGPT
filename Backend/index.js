@@ -1,4 +1,8 @@
 const { Configuration, OpenAIApi } = require("openai");
+const env = require('dotenv');
+env.config();
+
+const apiKey = process.env.apiKey;
 const serverless = require('serverless-http');
 const express = require('express')
 const cors = require('cors')
@@ -8,7 +12,7 @@ app.use(cors());
 
 
 const configuration = new Configuration({
-    apiKey: "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"
+    apiKey: apiKey
     });
 const openai = new OpenAIApi(configuration);
 
