@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise and Diet Chat</title>
+    <title>헬스트레이너 AI</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-gray-100 min-h-screen">
     <div class="container mx-auto py-12">
-        <h1 class="text-4xl text-center mb-8" style="font-family: 'Noto Sans KR', sans-serif; font-weight: 300;">헬린이의 매크로</h1>
+        <h1 class="text-4xl text-center mb-8" style="font-family: 'Noto Sans KR', sans-serif; font-weight: 300;">피트니스 AI</h1>
 
         <div id="hiddenSection" class="max-w-2xl mx-auto bg-white p-16">
 
@@ -57,32 +58,32 @@
             </div>
 
 
-
+            
             <div class="mb-6">
                 <label for="motivate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">운동 목적</label>
                 <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600 sm:border-b-0 sm:border-r">
                         <div class="flex items-center pl-5">
                             <input id="motivate-list-radio" type="radio" value="다이어트" name="motivate" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="motivate-list-radio" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">다이어트</label>
                             <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">근육량 약간 감소, 체지방 감소</p>
                         </div>
                     </li>
-                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600 sm:border-b-0 sm:border-r">
                         <div class="flex items-center pl-5 ">
                             <input id="motivate-list-radio" type="radio" value="체중유지" name="motivate" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="motivate-list-radio" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">유지어터</label>
                             <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">근육량, 체지방 유지</p>
                         </div>
                     </li>
-                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600 sm:border-b-0 sm:border-r">
                         <div class="flex items-center pl-5">
                             <input id="motivate-list-radio" type="radio" value="린매스업" name="motivate" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="motivate-list-radio" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">린매스업</label>
                             <p class="w-full text-xs font-normal text-gray-500 dark:text-gray-300">근육량 약간 증가, 체지방 약간 감소</p>
                         </div>
                     </li>
-                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600 sm:border-b-0 sm:border-r">
                         <div class="flex items-center pl-5">
                             <input id="motivate-list-radio" type="radio" value="벌크업" name="motivate" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="motivate-list-radio" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">벌크업</label>
@@ -146,17 +147,23 @@
                 <button type="submit" value="Submit"  class="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">
                     입력하기
                 </button>
-            </div>
+            </div>            
         </form>       
             
         </div>
 
-        <div id="visibleSection" class="bg-white shadow-md rounded p-6 hidden">
-            <div id="chat" class="overflow-y-auto h-96">
+        <div id="visibleSection" class="bg-white shadow-md rounded p-6 relative hidden">
+            <div id="chat" class="overflow-y-auto h-96">     
+                <button onclick="refreshPage()" class="absolute top-0 right-0 m-2 bg-gray-200 rounded-full p-2 w-8 h-8 flex items-center justify-center">
+                    <i class="fas fa-redo"></i>
+                </button>       
             </div>
             <div class="mt-4">
-                <input type="text" id="messageInput" class="w-full rounded border border-gray-300 p-2" placeholder="Type your message...">
-                <button onclick="sendPostRequest()" class="bg-blue-500 text-white py-2 px-4 rounded mt-2">입력하기</button>
+                <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">                    
+                    <i class="fas fa-spinner fa-spin text-4xl" style="font-size: 50px;"></i>
+                </div>
+                <input type="text" id="messageInput" class="w-full rounded border border-gray-300 p-2" placeholder="무엇이든 물어보세요">
+                    <button onclick="sendPostRequest()" class="bg-blue-500 text-white py-2 px-4 rounded mt-2">입력하기</button>
             </div>
         </div>
 
@@ -167,21 +174,49 @@
 
         let assistantMessages = [];
         let userMessages = [];
-
-       
+        let userData = "";
+        
+        function refreshPage(){
+            location.reload();
+        }
 
         document.getElementById('inputForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
             const sex = document.querySelector('input[name="sex"]:checked').value;
-            const age = document.getElementById('age').value;
-            const height = document.getElementById('height').value;
-            const weight = document.getElementById('weight').value;
-            const motivate = document.querySelector('input[name="motivate"]:checked').value;
-            const activityLevel = document.querySelector('input[name="activity-level"]:checked').value;
-            const bodyfat = document.getElementById('bodyfat').value;
-            const bodymuscle = document.getElementById('bodymuscle').value;
-            const userData = "성별:"+ sex +", 나이:"+ age + ", 키:"+ height+", 몸무게:"+weight+", 운동목적:" + motivate +", 활동짖수:" + activityLevel +", 체지방률:" + bodyfat + "%, 골격근량" + bodymuscle+"kg";
+            const age = document.getElementById('age').value + "세";
+            const height = document.getElementById('height').value + "cm";
+            const weight = document.getElementById('weight').value + "kg";
+
+            let motivate;
+            if (motivate === null) {
+                motivate = "모름";                
+                } else {
+                motivate = document.querySelector('input[name="motivate"]:checked').value;
+                }
+
+            let activityLevel;
+            if (activityLevel === null) {
+                activityLevel = "모름";                
+                } else {
+                    activityLevel = document.querySelector('input[name="activity-level"]:checked').value;
+                }
+
+            let bodyfat;
+            if (bodyfat === null) {
+                bodyfat = "모름, ";
+                } else {
+                    bodyfat = document.getElementById('bodyfat').value; + "%, ";
+                }
+
+            let bodymuscle; 
+            if (bodymuscle === null) {
+                bodymuscle = "모름";
+                } else {
+                    bodymuscle = document.getElementById('bodymuscle').value + "kg";
+                }
+
+            userData = "성별:"+ sex +", 나이:"+ age + ", 키:"+ height+", 몸무게:"+weight+", 운동목적:" + motivate +", 활동지수:" + activityLevel +", 체지방률:" + bodyfat + "골격근량:" + bodymuscle;
             
             const hiddenSection = document.getElementById("hiddenSection");
             const visibleSection = document.getElementById("visibleSection");
@@ -205,7 +240,9 @@
         
 
         async function sendPostRequest() {
-            const url = 'http://localhost:3000/api';
+            const url = 'https://ztakguxtx5mefxkqyp5kfm4g2i0yypcp.lambda-url.ap-northeast-2.on.aws/api';
+
+            // const url = 'http://localhost:3000/api';
             const messageInput = document.getElementById('messageInput');
             const data = { message: messageInput.value };
 
@@ -215,10 +252,13 @@
             
             messageInput.value = '';
 
+
+            loader.classList.remove("hidden");
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
                 },
                 body: JSON.stringify({
                     userData:userData,
@@ -228,8 +268,10 @@
             });
 
             const responseData = await response.json();
+            loader.classList.toggle("hidden");
             console.log(responseData);
-            displayServerMessage(responseData.assistant);   
+            displayServerMessage(responseData.assistant);
+               
             
         }
 
